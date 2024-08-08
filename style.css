@@ -126,36 +126,8 @@ section .title::after{
     color: #fff;
 }
 
-.flexcontainer {
-    display: flex;
-    justify-content: center; /* Center columns horizontally */
-    flex-wrap: wrap; /* Allow columns to wrap on smaller screens */
-    gap: 20px; /* Add spacing between columns */
-    padding: 20px;
-}
 
-/* Styling for columns */
-.skillscolumn {
-    display: flex;
-    flex-direction: column;
-    align-items: center; /* Center content within the column */
-    width: 200px; /* Adjust as needed */
-}
 
-/* Styling for individual info items */
-.skillinfo{
- /* Vertical spacing between items */
-    padding: 10px;
-
-    text-align: center;
-}
-
-/* Responsive design for smaller screens */
-@media (max-width: 768px) {
-    .container {
-        flex-direction: column; /* Stack columns vertically on small screens */
-    }
-}
 /* menu btn styling */
 .menu-btn{
     color: #fff;
@@ -429,22 +401,96 @@ section .title::after{
 
 
 /* skills section styling */
+.skills .skills-content {
+    display: flex;
+    flex-wrap: wrap;
+}
 
-.skills .title::after{
+/* Flex container for the tech stack list */
+.skills .flexcontainer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+/* Flex column for each set of skills */
+.skills .skillscolumn {
+    display: flex;
+    flex-direction: column;
+    width: calc(50% - 10px);
+    margin-bottom: 20px;
+}
+
+/* Individual skill information */
+.skills .skillinfo {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+    padding: 5px 0;
+    border-bottom: 1px solid #ccc;
+}
+
+/* Icon styling for skills */
+.skills .skillinfo i {
+    font-size: 24px;
+    margin-right: 10px;
+    color: #006633;
+}
+
+/* Text styling for skills */
+.skills .skillinfo span {
+    font-size: 18px;
+    font-weight: 500;
+}
+
+/* Responsive Design for Smaller Screens */
+@media screen and (max-width: 768px) {
+    .skills .skills-content {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .skills .flexcontainer {
+        justify-content: center;
+        width: 100%;
+    }
+
+    .skills .skillscolumn {
+        width: 100%;
+        align-items: center;
+    }
+
+    .skills .skillinfo {
+        justify-content: center;
+        padding: 10px 0;
+        border-bottom: none;
+    }
+}
+
+/* Title styling */
+.skills .title::after {
     content: "What I offer";
 }
-.skills .skills-content .column{
+
+/* Column layout for the left side */
+.skills .skills-content .column {
     width: calc(50% - 30px);
 }
-.skills .skills-content .left .text{
+
+/* Styling for the paragraph text */
+.skills .skills-content .left .text {
     font-size: 20px;
     font-weight: 600;
     margin-bottom: 10px;
 }
-.skills .skills-content .left p{
+
+/* Paragraph text alignment */
+.skills .skills-content .left p {
     text-align: justify;
 }
-.skills .skills-content .left a{
+
+/* Button styling */
+.skills .skills-content .left a {
     display: inline-block;
     background: #006633;
     color: #fff;
@@ -456,46 +502,12 @@ section .title::after{
     border: 2px solid #006633;
     transition: all 0.3s ease;
 }
-.skills .skills-content .left a:hover{
+
+/* Button hover effect */
+.skills .skills-content .left a:hover {
     color: #006633;
     background: none;
 }
-.skills .skills-content .right .bars{
-    margin-bottom: 15px;
-}
-.skills .skills-content .right .info{
-    display: flex;
-    margin-bottom: 5px;
-    align-items: center;
-    justify-content: space-between;
-}
-.skills .skills-content .right span{
-    font-weight: 500;
-    font-size: 18px;
-}
-.skills .skills-content .right .line{
-    height: 5px;
-    width: 100%;
-    background: lightgrey;
-    position: relative;
-}
-
-.skills-content .right .html::before{
-    width: 90%;
-}
-.skills-content .right .css::before{
-    width: 60%;
-}
-.skills-content .right .js::before{
-    width: 80%;
-}
-.skills-content .right .php::before{
-    width: 50%;
-}
-.skills-content .right .mysql::before{
-    width: 70%;
-}
-
 /* teams section styling */
 .teams .title::after{
     content: "Meet my team";
