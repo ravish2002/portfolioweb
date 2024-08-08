@@ -254,7 +254,7 @@ section .title::after{
 
 /* about section styling */
 .about .title::after{
-    content: "Who i am";
+    content: "Who I am";
 }
 .about .about-content .left{
     width: 45%;
@@ -498,7 +498,7 @@ section .title::after{
 
 /* teams section styling */
 .teams .title::after{
-    content: "Who's with me";
+    content: "Meet my team";
 }
 .teams .carousel .card{
     background: #222;
